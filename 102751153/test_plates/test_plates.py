@@ -1,0 +1,33 @@
+from plates import is_valid
+
+def main():
+    test_min_and_max_char()
+    test_start_with_two_char()
+    test_numbers_middle()
+    test_number_zero()
+    test_pun()
+
+
+def test_min_and_max_char():
+   assert is_valid('AA') == True
+   assert is_valid('ABCDEF') == True
+   assert is_valid('A') == False
+   assert is_valid('ABCDEFGH') == False
+def test_start_with_two_char():
+   assert is_valid('AA') == True
+   assert is_valid('A2') == False
+   assert is_valid('2A') == False
+   assert is_valid('22') == False
+def test_numbers_middle():
+   assert is_valid('AAA222') == True
+   assert is_valid('AA2A') == False
+def test_number_zero():
+    assert is_valid('CS50') == True
+    assert is_valid('CS05') == False
+def test_pun():
+    assert is_valid('PI3.14') == False
+    assert is_valid('PI3!14') == False
+    assert is_valid('PI3 14') == False
+
+if __name__ == "__main__":
+    main()
