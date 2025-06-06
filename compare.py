@@ -14,7 +14,7 @@ if x == y:
 x = int(input("What si x? "))
 y = int(input("What is y? "))
 
-#"if x < y:" this format call bullean expression after":" 4 space is necessary as it indicates "?"---------->
+#"if x < y:" this format call boolean expression after":" 4 space is necessary as it indicates "?"---------->
 if x < y:
     print("X is less than Y")
 elif x > y:
